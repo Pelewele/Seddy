@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedinam</title>
+    <style>
+        body {
+            font-family: 'Brush Script MT', cursive;
+            background: url('https://www.example.com/ballet-picture.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(255, 182, 193, 0.9); /* Pink background with more transparency */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.5); /* Pink shadow */
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff; /* White color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+        }
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff; /* White color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        label {
+            font-size: 22px;
+            margin-right: 20px;
+            color: #fff; /* White color */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+        }
+        label.yes {
+            font-size: 30px; /* Larger font size for Yes */
+            color: #ff69b4; /* Hot pink color for Yes */
+        }
+        .styled-question {
+            background-color: #ff69b4; /* Hot pink background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for the styled question */
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nyuienyo🧸💕</h1>
+        <form id="question-form">
+            <div id="first-question" class="question">
+                <p>Will you be my Emily??</p>
+                <input type="radio" id="yes" name="answer" value="yes" onclick="handleSelection('yes')">
+                <label for="yes" class="yes">Yes</label>
+                <input type="radio" id="no" name="answer" value="no" onclick="handleSelection('no')">
+                <label for="no">No</label>
+            </div>
+            <div id="second-question" class="question hidden">
+                <p>Pretty pleasssseeee</p>
+                <input type="radio" id="sure-yes" name="sure-answer" value="yes" onclick="handleFinalSelection('yes')">
+                <label for="sure-yes" class="yes">Yes</label>
+                <input type="radio" id="sure-no" name="sure-answer" value="no" onclick="handleSecondNo()">
+                <label for="sure-no">No</label>
+            </div>
+            <div id="third-question" class="question hidden">
+                <p>Oh me ooh😔</p>
+                <input type="radio" id="really-yes" name="really-answer" value="yes" onclick="handleFinalSelection('yes')">
+                <label for="really-yes" class="yes">Yes</label>
+                <input type="radio" id="really-no" name="really-answer" value="no" onclick="handleFinalSelection('no')">
+                <label for="really-no">No</label>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleSelection(answer) {
+            if (answer === 'yes') {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Redirect to a funny wedding video
+            } else {
+                document.getElementById('first-question').classList.add('hidden');
+                document.getElementById('second-question').classList.remove('hidden');
+            }
+        }
+
+        function handleSecondNo() {
+            document.getElementById('second-question').classList.add('hidden');
+            document.getElementById('third-question').classList.remove('hidden');
+        }
+
+        function handleFinalSelection(answer) {
+            if (answer === 'yes') {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Redirect to a funny wedding video
+            } else {
+                alert('You chose the wrong answers please🌚');
+            }
+        }
+    </script>
+</body>
+</html>
